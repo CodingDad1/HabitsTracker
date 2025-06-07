@@ -1,0 +1,40 @@
+body {
+    font-family: 'Cinzel', serif;
+    background: radial-gradient(circle at top, #2c2c44, #1e1e2f, 40%, #0d0d1a 80%);
+    background-attachment: fixed;
+    color: #f9f9f9;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    color: #ffc857;
+    text-shadow: 0 0 5px #000, 0 0 15px #f2a365;
+}
+
+#timer {
+    font-size: 4rem;
+    margin: 20px 0;
+}
+
+#sessionType {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #29293d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ffc857;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #3d3d5c;
+}
+
