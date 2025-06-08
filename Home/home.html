@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Habit Ritual Home</title>
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body>
+        <main class="container">
+            <h1>Ritual Deck</h1>
+
+            <section id="habitInputs">
+                <h2>Add or Edit Your Habits</h2>
+                <div class="habit-edit">
+                    <input type="text" id="habit1" placeholder="Habit 1" maxlength="40" />
+                    <input type="text" id="habit2" placeholder="Habit 2" maxlength="40" />
+                    <input type="text" id="habit3" placeholder="Habit 3" maxlength="40" />
+                    <input type="text" id="habit4" placeholder="Habit 4" maxlength="40" />
+                    <input type="text" id="habit5" placeholder="Habit 5" maxlength="40" />
+                    <input type="text" id="habit6" placeholder="Habit 6" maxlength="40" />
+                    <button id="saveBtn">Save Habits</button>
+                </div>
+            </section>
+            <section id="ritualSelection">
+                <h2>Choose Your Ritual</h2>
+                <div id="habitList"></div>
+                <div class="random-buttons">
+                    <div class="dice-wrapper">
+                        <button id="diceBtn" disabled> Roll Dice</button>
+                    <small id="diceHint">(Must have at least 3 selected)</small>
+                    </div>
+                    <div class="coin-wrapper">
+                    <button id="coinBtn" disabled> Flip Coin</button>
+                    <small id="coinHint">(Must Have 2 Habits selected)</small>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="home.js"></script>
+    </body>
+</html>
