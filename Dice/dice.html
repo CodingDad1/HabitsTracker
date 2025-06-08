@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dice Roll Result</title>
+  <link rel="stylesheet" href="dice.css">
+</head>
+<body>
+  <main class="dice-result">
+    <h1>🎲 The Dice Has Spoken</h1>
+    <div id="diceResult">Loading...</div>
+    <button onclick="startRolled()">Begin</button>
+  </main>
+
+  <script>
+    const rolledHabit = localStorage.getItem('rolledHabit');
+    const resultDiv = document.getElementById('diceResult');
+
+    if (rolledHabit) {
+      resultDiv.innerHTML = `<p>Chosen Habit: <span style="color:#ff9933">${rolledHabit}</span></p>`;
+    } else {
+      resultDiv.innerText = 'No dice data found.';
+    }
+
+    function startRolled() {
+      localStorage.setItem('manualHabit', JSON.stringify({
+        habit: rolledHabit,
+        duration: 25
+      }));
+      window.location.href = '../PomoDoroTimer/timer.html';
+    }
+  </script>
+</body>
+</html>

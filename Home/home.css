@@ -12,8 +12,8 @@ body {
 }
 .container {
     width: 90%;
-    max-width: 400px;
-    padding: 20px;
+    max-width: 500px;
+    padding: 30px;
     border-radius: 15px;
     background: rgba(0, 0, 50, 0.7);
 }
@@ -79,14 +79,23 @@ button {
     border-radius: 8px;
     box-shadow: 0 0 8px #33ccff;
 } */
-.habit-btn.selected {
-    background-color: #0066ff;
-    color: white;
-    font-weight: bold;
-    border: 2px solid #0033cc;
-    transform: scale(1.05);
-}
 
+/* when buttons are selected */
+.habit-btn.selected {
+    background-color: linear-gradient(45deg, #ff4500, #ff8c00, #ffcc00);
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #ff9900;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 5px #ff6f00, 0 0 30px 10px #ff9900 inset;
+    position: relative;
+    animation: firePulse 1.2s infinite ease-in-out;
+}
+@keyframes firePulse {
+    0% {box-shadow: 0 0 15px 5px #ff6f00, 0 0 30px 10px #ff9900 inset;}
+    50% {box-shadow: 0 0 20px 10px #ff9900, 0 0 35px 15px #ffcc00 inset;}
+    100% {box-shadow: 0 0 15px 5px #ff6f00, 0 0 30px 10px #ff9900 inset;}
+}
 .selected:hover {
     background-color: #0066ff;
     transform: scale(1.05);
@@ -97,6 +106,59 @@ button {
     justify-content: center;
     gap: 10px;
 }
+
+#saveBtn {
+    background-color: #3399ff;
+    box-shadow: 0 0 12px #66ccff;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#saveBtn:hover {
+    background-color: #66ccff;
+    transform: scale(1.05);
+    box-shadow: 0 0 16px #99ddff;
+}
+
+#coinBtn:disabled {
+    background-color: #555;
+    color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+    opacity: 0.6;
+}
+
+#coinBtn {
+    transition: background 0.3s ease, transform 0.2s ease, opacity 0.3s ease;
+}
+
+.ritual-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+#startBtn {
+    background-color: #ffaa00;
+    color: #1a1a1a;
+    font-weight: bold;
+    box-shadow: 0 0 12px #ffcc66;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+#startBtn:disabled {
+    background-color: #777;
+    color: #ccc;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+#startBtn:hover:enabled {
+    background-color: #ffc34d;
+    transform: scale(1.05);
+}
+
+
 @media (max-width: 500px){
     h1 {
         font-size: 1.6rem;
@@ -130,3 +192,76 @@ button {
     font-size: 0.8rem;
     color: #ccc;
 }
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  background-image: linear-gradient(to bottom right, #ff4500, #3a0d00, #1a0000);
+  border: 2px solid #ff6d00;
+  color: #fffbe6;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow:
+    0 0 20px rgba(255, 69, 0, 0.8),
+    0 0 40px rgba(255, 87, 34, 0.6),
+    0 0 10px rgba(255, 140, 0, 0.4) inset;
+  z-index: 999;
+  width: 80%;
+  max-width: 420px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.modal p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #ffe0b2;
+}
+
+#durationSlider {
+  width: 100%;
+  margin: 1rem 0;
+  accent-color: #ff7043;
+}
+
+#sliderValue {
+  font-weight: bold;
+  color: #ffb74d;
+  margin-bottom: 1rem;
+}
+
+#confirmStart,
+#cancelStart {
+  background: #ff6d00;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#confirmStart:hover {
+  background: #ff8f00;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #ffb300;
+}
+
+#cancelStart {
+  background: rgba(255, 69, 0, 0.1);
+  border: 2px solid #ff7043;
+  color: #ffccbc;
+}
+
+#cancelStart:hover {
+  background: rgba(255, 87, 34, 0.2);
+  transform: scale(1.05);
+  color: #fff3e0;
+}
+
