@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <!-- Making the viewport to adjust to any device -->
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Habit Home Screen</title>
+    </head>
+    <body>
+        <main>
+            <h1>Habit Tracker</h1>
+
+            <section>
+                <h2>Add or Edit your Habits</h2>
+                <div class="habit-edit">
+                    <input type="text" id="habit1" placeholder="Habit 1" maxlength="40" />
+                    <input type="text" id="habit2" placeholder="Habit 2" maxlength="40" />
+                    <input type="text" id="habit3" placeholder="Habit 3" maxlength="40" />
+                    <input type="text" id="habit4" placeholder="Habit 4" maxlength="40" />
+                    <input type="text" id="habit5" placeholder="Habit 5" maxlength="40" />
+                    <input type="text" id="habit6" placeholder="Habit 6" maxlength="40" />
+                    <button id="saveBtn">Save Habits</button>
+                </div>
+            </section>
+            <section id="habitSelection">
+                <h2>Choose Your Starter Habit</h2>
+                <div id="habitList"></div>
+                <div class="habit-buttons">
+                    <button id="startBtn" disabled>Start Habit</button>
+                    <!-- In random buttons div class will contain the coin flipper and the roll dice functions. I will update these later once I get the main logging function to work although
+                    I would like the roll dice and coin flipper to be on the same page as the home page just as an alert. -->
+                    <div class="random-buttons">
+                        <div class="dice-wrapper">
+                            <button id="rollDice"> Roll Dice </button>
+                            <small id="diceHint">(Roll all current Habits)</small>
+                        </div>
+                        <div class="coin-wrapper">
+                            <button id="coinFlip" disabled> Flip Coin </button>
+                            <small id="coinHint">(Must have 2 habits selected)</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
