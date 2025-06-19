@@ -8,10 +8,10 @@
         <title>Habit Home Screen</title>
     </head>
     <body>
-        <main>
+        <main id="container">
             <h1>Habit Tracker</h1>
 
-            <section>
+            <section id="habitInputs">
                 <h2>Add or Edit your Habits</h2>
                 <div class="habit-edit">
                     <input type="text" id="habit1" placeholder="Habit 1" maxlength="40" />
@@ -36,7 +36,7 @@
                             <small id="diceHint">(Roll all current Habits)</small>
                         </div>
                         <div class="coin-wrapper">
-                            <button id="coinFlip" disabled> Flip Coin </button>
+                            <button id="coinBtn" disabled> Flip Coin </button>
                             <small id="coinHint">(Must have 2 habits selected)</small>
                         </div>
                     </div>
